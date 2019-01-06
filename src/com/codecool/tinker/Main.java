@@ -15,6 +15,7 @@ public class Main {
         System.out.println("numberOfPlayers: " + numberOfPlayers);
         System.out.println("numberOfSyllables: " + numberOfSyllables);
 
+        //creates array and fills it with numbers as players
         ArrayList<Integer> players = new ArrayList<>();
         for (int i = 0; i < numberOfPlayers; i++) {
             players.add(i+1);
@@ -24,7 +25,7 @@ public class Main {
 
         int counter = 0;
         while (players.size() > 1) {
-            if (!iterator.hasNext()) iterator = players.iterator();
+            if (!iterator.hasNext()) iterator = players.iterator(); //if we reach the end we reset the iterator to the beginning
             iterator.next();
             counter++;
             if (counter == numberOfSyllables) {
